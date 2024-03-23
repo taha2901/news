@@ -8,8 +8,11 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: NewslistView(
-        physics: BouncingScrollPhysics(),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
+        child: NewslistView(
+          physics: BouncingScrollPhysics(),
+        ),
       ),
     );
   }
