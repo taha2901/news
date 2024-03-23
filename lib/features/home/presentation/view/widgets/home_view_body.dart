@@ -31,7 +31,6 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: NewslistView(
             physics: NeverScrollableScrollPhysics(),
-            category: 'general',
           ),
         ),
       ],

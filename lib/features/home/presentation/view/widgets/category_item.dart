@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:news/features/home/data/model/category_model/category.dart';
 import 'package:news/features/home/presentation/view/category_view.dart';
+
+import '../../manager/category_news_cubit/news_cubit.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
@@ -13,14 +14,12 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          // GoRouter.of(context).push('/CategoryItem');
+          NewsCubit.get(context).updateCategory(category.categoryName);
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) {
-                return CategoryView(
-                  category: category.categoryName,
-                );
+                return const CategoryView();
               },
             ),
           );

@@ -13,17 +13,14 @@ void main() {
 class NewsApp extends StatelessWidget {
   const NewsApp({
     super.key,
-    // required this.category,
   });
-// final String category;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => NewsCubit()..getNewsData(category: 'sports'),
+      create: (context) => NewsCubit()..getNewsData(),
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
       ),
     );
   }

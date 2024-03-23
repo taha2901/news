@@ -8,10 +8,6 @@ abstract class AppRouter {
         path: '/',
         builder: (context, state) => const HomeView(),
       ),
-      // GoRoute(
-      //   path: '/CategoryItem',
-      //   builder: (context, state) => const CategoryItem(),
-      // ),
     ],
   );
 }

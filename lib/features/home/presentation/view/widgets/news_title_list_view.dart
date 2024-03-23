@@ -5,9 +5,11 @@ import 'package:news/features/home/presentation/manager/category_news_cubit/news
 import 'news_title.dart';
 
 class NewslistView extends StatelessWidget {
-  const NewslistView({super.key,required this.physics,required this.category});
+  const NewslistView({
+    super.key,
+    required this.physics,
+  });
   final ScrollPhysics? physics;
-  final String category;
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit, NewsState>(
@@ -38,4 +40,3 @@ class NewslistView extends StatelessWidget {
     );
   }
 }
-
